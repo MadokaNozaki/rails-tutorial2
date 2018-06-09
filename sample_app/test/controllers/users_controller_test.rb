@@ -47,6 +47,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
                                     user: { password:    'hoge_password',
                                             password_confirmation: 'hoge_password',
                                             admin: true } }
+    @other_user.reload
     assert_not @other_user.admin?
   end
 =end
